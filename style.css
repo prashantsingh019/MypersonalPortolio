@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+}
+:root {
+  --textcolor: #14f7ff;
+  --hovercolor: rgb(255, 255, 255);
+  --bgcolor:#000000;
+  --spltext: #EEEEEE;
+}
+/*Pages Styling*/
+.page{
+  width: 100vw;
+  height: 50vw;
+}
+#p-1 {
+  display:grid;
+  height: 55vmax;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "nav"
+                      "main";
+  border-bottom: 3px solid var(--textcolor);                    
+ }
+#p-2{
+  display: grid;
+  height: 120vh;
+  grid-template-rows: 40% 60%;
+  grid-template-areas: "about"
+                      "skills";
+  border-bottom: 3px solid var(--textcolor);                    
+  }
+#p-3 {
+  border-bottom: 3px solid var(--textcolor);
+  height: 110vh;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "services"
+                      "cerification";
+ }
+#p-4 {
+  border-bottom: 3px solid var(--textcolor);
+  height: 150vh;
+  display: grid;
+  grid-template-rows: 70% 40% 10%;
+  grid-template-areas: "projects"
+                      "contact"
+                      "footer";
+   /* background-color: yellow;                    */
+}
+.spl-txt{
+  color: var(--spltext);
+}
+ /* header Start*/
+header{
+    background-color: var(--bgcolor);
+    grid-area: nav;
+}
+nav{
+  width: 100%;
+  height: 100%;
+  background-color: var(--bgcolor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 2.2vw;
+  border-bottom: 2px solid var(--textcolor);
+}
+.logo{
+  font-family: "Madimi One", sans-serif;
+  font-size: 1.8rem;
+  color: var(--textcolor);
+  cursor: pointer;
+}
+/* Nav links*/
+.nav-list {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list li {
+  list-style: none;
+  display: inline-block;
+  margin: 0px 20px;
+}
+.nav-list li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--textcolor);
+}
+/*dropdown menu*/
+.dropdown {
+  display: none;
+  position: absolute;
+  margin-left: -20px;
+  z-index: 999;
+}
+.dropdown ul {
+  padding: 0;
+  margin: 0;
+ }
+.dropdown li {
+  display: block;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  border: 1px solid var(--textcolor);
+  padding: 10px 5px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+ li:hover .dropdown{
+  display: block;
+}
+/*hamburger*/
+#hamicon{
+  color: var(--textcolor);
+  font-size: 2em;
+  display: none;
+}
+/*hover effects*/
+.logo:hover {
+  color: var(--spltext);
+}
+.nav-list li a:hover{
+  color:var(--spltext);
+}
+.dropdown li:hover {
+  background-color: #131313;
+  color:var(--spltext);
+}
+.navbar li:hover .dropdown {
+  display: block;
+}
+.btn-hover:hover{
+  box-shadow: 0px 0px 10px var(--textcolor);
+}
+#home{
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+.message{
+    width: 60%;
+    height: 100%;
+}
+.message h1{ 
+    font-size: 4.5vmax;
+    color:#47b4f8;
+}
+.message p{
+    padding: 5px 0px;
+    font-size: 2vmax;
+    line-height: 1.2;
+    color:#ffffff;
+  }
+  .home-buttons{
+    width: 35%;
+    padding: 10px 0px;
+    border: 1px solid red; 
+  }
+  .home-buttons button{
+    padding: 10px 15px;
+    border: 2px solid var(--textcolor);
+    border-radius: 6px;
+    font-size: 1.3em;
+    font-weight: 700;
+    color:#979797;
+    background: none;
+    box-shadow: 0px 0px 2px white;
+  }
+  .home-buttons button a{
+    text-decoration: none;
+    color:#979797;
+   }
+  .home-buttons button:hover{
+    box-shadow: 0px 0px 10px var(--textcolor);
+    color:var(--textcolor);
+  }
+  .home-buttons button:hover  a{
+    color:var(--textcolor);
+  }
+  .socialIcons{
+    width: 100%;
+    display: flex;
+    margin-top: 3vw;
+    gap: 1.5vw;
+  }
+  .socialIcons a{
+    text-decoration: none;
+    border: 1px solid var(--textcolor);
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px white;
+  
+   }
+  .socialIcons a i{
+    font-size: 3.5vmax;
+    color:#979797;
+  }
+  .socialIcons a:hover{
+    box-shadow: 0px 0px 15px var(--textcolor);
+    color: var(--textcolor);
+  }
+  .socialIcons a:hover i{
+    color: var(--textcolor);
+  }
+ .background{
+    background: rgba(0, 0, 0, 0.794) url("./Images/webDev.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+  }
+  .profileImg{
+    width: 30%;
+  
+   }
+  .profileImg img{
+   height: 95%;
+   width: 100%;
+   position: relative;
+   right: 20px;
+   top: -60px;
+   border: 3px solid var(--textcolor);
+   border-radius: 10px;
+   box-shadow: 0px 0px 8px white;
+   object-fit: cover;
+  }
+  #services i{
+    font-size: 3em;
+  }
+  #about{
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid var(--textcolor); */
+  }
+  #about h2{
+    text-align: center;
+    color: var(--textcolor);
+    padding: 0.3vw 0px;
+  }
+  #about .card{
+    width: 90vw;
+    border: 2px solid var(--textcolor);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px var(--textcolor);
+    display: flex;
+    background-color: var(--bgcolor);
+    display: flex;
+    align-items: center;
+  }
+  #about .card img{
+    height:20vw;
+    border-radius: 10px;
+    filter: brightness(0.7);
+  }
+  .cardtext p{
+    color: var(--textcolor);
+    font-size: 1.8vw;
+    padding: 5px 20px;
+    text-align: justify;
+    position: relative;
+  }
+  .cardtext p:nth-child(2):after{
+    content: 'Read more';
+    width: 70px;
+    height: 25px;
+    background-color: var(--textcolor);
+    box-shadow: 2px 2px 10px var(--textcolor);
+    position: absolute;
+    bottom: 0.5vw;
+    left: 45%;
+    border-radius: 3px;
+    color: rgb(73, 73, 73);
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ #skills{
+  grid-area: skills;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid green;
+  }
+  #skills h2{
+    color:var(--textcolor);
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+  }
+  .longCard{
+    width: 80%;
+    background-color: var(--bgcolor);
+    height: 30%;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+   }
+  .longCard .icon{
+    height: 60%;
+    width: 10%;
+    margin-left: 10px;
+  }
+  .longCard .icon i{
+    color: var(--textcolor);
+    font-size: 4em;
+  }
+  .longCard .bar{
+    height: 20%;
+    width: 85%;
+    border: 1px solid rgb(237, 237, 237);
+    border-radius: 5px;
+    position: relative;
+  }
+  .longCard .bar::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px
+  }
+ .html::after{
+  animation: html 1.5s ease-in-out forwards;
+  background-color: rgb(254, 50, 50);
+ } 
+ .css::after{
+  animation: css 1.5s ease-in-out forwards;
+  background-color: rgb(16, 161, 246);
+ } 
+ .js::after{
+  animation:  js 1.5s ease-in-out forwards;
+  background-color: rgb(246, 235, 16);
+ } 
+ .tailwind::after{
+  animation:tailwind 1.5s ease-in-out forwards;
+  background-color: rgb(140, 18, 247);
+ } 
+  @keyframes html{
+    100%{
+      width: 85%;
+    }
+  }
+  @keyframes css{
+    100%{
+      width: 70%;
+    }
+  }
+  @keyframes js{
+    100%{
+      width: 50%;
+    }
+  }
+  @keyframes tailwind{
+    100%{
+      width: 30%;
+    }
+  }
+  #services{
+    grid-area: services;
+    display: flex;
+    align-items: center;
+    border: 1px solid blue;
+    padding: 5px 20px;
+   }
+   #services .card{
+    width: 28%;
+    height: 90%;
+    background-color:var(--bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--textcolor);
+    color: var(--textcolor);
+   }
+   .p-3-heading{
+    padding: 20px 20px;
+    background-color: var(--textcolor);
+    color: white;
+   }
+   #services .card p{
+    display: block;
+    padding: 5px 15px;
+    font-size: medium;
+    text-align: center;
+   }
+   #services .card .img i{
+    font-size: 10vw;
+   }
+  .card .readmore{
+    width: 70px;
+    height: 25px;
+    background-color: var(--textcolor);
+    box-shadow: 0px 0px 5px var(--textcolor);
+    border: none;
+    border-radius: 3px;
+   }
+   .card .readmore:hover{
+    box-shadow: 0px 0px 10px var(--textcolor);
+   }
+   #cerification{
+    grid-area: cerification;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border: 1px solid blue;
+    padding: 5px 20px;
+   }
+   #cerification .card{
+    width: 28%;
+    height: 90%;
+    background-color:var(--bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--textcolor);
+    color: var(--textcolor);
+   }
+   .p-3-heading{
+    padding: 20px 20px;
+    background-color: var(--textcolor);
+    color: white;
+   }
+   #cerification .card p{
+    display: block;
+    /* border: 1px solid green; */
+    padding: 5px 15px;
+    font-size: medium;
+    text-align: center;
+   }
+ 
+   #cerification .card .readmore{
+    width: 70px;
+    height: 25px;
+    background-color: var(--textcolor);
+    box-shadow: 0px 0px 5px var(--textcolor);
+    border: none;
+    border-radius: 3px;
+   }
+   .card .readmore:hover{
+    box-shadow: 0px 0px 10px var(--textcolor);
+   }
+   #cerification .card a{
+    text-decoration: none;
+    color: grey;
+   }
+   #cerification .card img{
+    padding:20px 10px ;
+    height: 80%;
+   }
+   #cerification .card .readmore:hover{
+    box-shadow: 0px 0px 10px var(--textcolor);
+   }
+   #projects {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: brown; */
+   }
+   #projects .project-container{
+     width: 90%;
+     height: 95%;
+     margin: auto;
+     /* background-color: chartreuse; */
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(2,1fr);
+     grid-gap: 10px;
+     padding: 10px 10px;
+   }
+   .projectCard{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: red; */
+    position: relative;
+    overflow: hidden;
+   }
+   #p-4 .project-heading{
+    margin-top: 5px;
+    font-weight: 800;
+    font-size: 1.5em;
+   }
+   .projectCard::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.566);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    padding: 5px 7px;
+    color: white;
+   }
+   .projectCard:hover +p-1::after{
+     top:0;
+   }
+   .p-1::after{
+    content: ' Spin Into Innovation: Introducing our Rotative Icon Project! 🌀✨ Explore the dynamic world of interactive design with our HTML/CSS masterpiece. Watch as icons come to life with mesmerizing rotations, adding flair and functionality to your web projects. Elevate your user experience and stand out from the crowd with our innovative solution. Let your creativity spin freely with our Rotative Icon Project';
+   }
+    /*Media Query*/
+    @media screen and (max-width:360px){
+      #p-1 {
+        width: 100vw;
+        height: 70vh;
+        grid-template-rows: 10% 90%;
+        grid-template-areas: "nav"
+                            "main";
+        }
+        nav{
+          padding: 0px 50px 0px 10px;
+        }
+        .message{
+          width: 50%;
+        }
+        .message h1{
+          font-size:4vmax;
+         }
+        .message p{
+          margin-top: 10px;
+          width: 95vw;
+          font-size: 1.2rem;
+          padding-top: 0px;
+          padding-left: 0px;
+          font-weight: 400;
+        }
+        .profileImg{
+          width: 42%;
+          height: auto;
+          position: relative;
+          right: 0%;
+          top: -16%;
+         }
+         .home-buttons{
+           width: 80vw;
+           padding-left: 2px;
+          }
+          .home-buttons button{
+            padding: 5px 5px;
+            font-size: 0.8rem;
+            margin:0px 2px;
+          }
+          .socialIcons{
+           width: 80vw;
+          }
+           .socialIcons a{
+             padding: 5px 5px;
+             font-size: 0.8rem;
+             margin:0px 2px;
+             }
+            .nav-list{
+            display: none;
+             }
+            .logo{
+             font-size: 1.5rem;
+             }
+             #hamicon{
+              display: block;
+             }
+             #p-2{
+              height: 80vh;
+              grid-template-rows: 55% 45%;
+             }
+             /*About Section*/
+             #about h2{
+               font-size: 0.8rem;
+             }
+             #about .card{
+              height: 40vh;
+              flex-direction: column;
+              justify-content: center;
+             }
+             #about .card img{
+              height: 15vmax;
+              margin-top: 10px;
+             }
+             .cardtext p{
+              font-size: 1.5vmax;
+             }
+             .cardtext p:nth-child(2):after{
+              font-size: 1.2vmax;
+              width: 47px;
+              height: 12px;
+              left: 33%;
+              bottom: 5%;
+             }
+             .longCard{
+              width: 90vw;
+              height: 15vw;
+              padding: 0px 2px;
+              display: flex;
+              align-items: center;
+             }
+             #skills h2{
+              font-size: 0.8em;
+              padding: 0px;
+             }
+             .longCard .icon i{
+               font-size: 2em;
+               position: relative;
+               top: 0px;
+              }
+              #p-3{
+                height: 200vh;
+                width: 50vw;
+              }
+             #services{
+                flex-direction: column;
+                align-items: start;
+               }
+              .p-3-heading{
+                padding: 5px 5px;
+                position: relative;
+                background-color: rgb(173, 173, 3);
+                font-size: 1em;
+              }
+              #services .card{
+                /* border: 1px solid red; */
+                width: 85vw;
+              }
+              #services .card i{
+                font-size: 1.5em;
+              }
+              #services .card p{
+                font-size: 12px;
+              }
+              .card .readmore{
+                width: 60px;
+                height: 15px;
+                font-size: 0.6rem;
+                font-weight: 700;
+              }
+    
+            }
