@@ -8,17 +8,24 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"
   />
+    <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My Personal Portfolio</title>
 </head>
 <body>
-
-    <!-- Page01 header and Main Container: 60% + 40% -->
-    <div class="page" id="p-1">
+  <!-- Page 01  Navbar and main img + content-->
+  <div class="page" id="p-1">
     <header>
-        <nav>
+        <nav>  <!-- My name -->
             <div class="logo">
                  Prashant Singh
             </div>
+             <!-- dark mode switch -->
+              <div class="switch">
+                   <input type="checkbox" id="darkmode-toggle">
+                   <label for="darkmode-toggle"></label>
+              </div>
+              <!-- nav links  -->
               <ul class="nav-list">
                 <li>
                    <a href="#home">HOME</a>
@@ -31,6 +38,7 @@
                 </li>
                 <li>
                     <a href="#services">SERVICES<i class="ri-arrow-down-s-line"></i></a>
+                    <!-- dropdown menu -->
                     <div class="dropdown">
                         <ul>
                            <li>Front-End</li>
@@ -41,27 +49,29 @@
                        </div>
                 </li>
                 <li>
-                    <a href="#about">CONTACT</a>
+                    <a href="#contact">CONTACT</a>
                 </li>
             </ul> 
+            <!-- hamicon -->
             <i class="ri-menu-3-fill" id="hamicon"></i>
-            
-        </nav>
+            </nav>
       </header>
+      <!-- main img and message -->
        <main id="home" class="background">
           <div class="message">
             <h1>
                 We<br>
                 Loves❤️<br>
                 To <span class="spl-txt">Build</span><br>
-               Interactive Website.
+               Interactive Website&lt;/&gt;.
              </h1>
              <p>Hi I'm <span class="spl-txt">Prashant </span>a web developer and a computer science student
                 I am a passionate developer who loves to build websites,webpages,applications
                 you can contact me if you also want one for yourself. 
              </p>
+             <!-- home buttons -->
              <div class="home-buttons">
-                <button><a href="/Docs/resume.pdf">Let Talk<i class="ri-telegram-line"></i></a></button>
+                <button><a href="#lettalk">Let Talk<i class="ri-telegram-line"></i></a></button>
                 <button><a href="/Docs/resume.pdf">Resume</a></button>
              </div>
              <!--social icon start end -->
@@ -69,11 +79,12 @@
                <a href="https://github.com/prashantsingh019"><i class="ri-github-fill"></i></a>
                <a href="https://www.instagram.com/am_prashantkushwah/"><i class="ri-instagram-line"></i></a>
                <a href="https://www.linkedin.com/in/prashant-singh-b843b9210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="ri-linkedin-fill"></i></a>
-                <a href="ps731278@gmail.com"><i class="ri-mail-line"></i></a>
+                <a href="http://Discordapp.com/users/1030679419628568576"><i class="ri-discord-fill"></i></i></a>
              </div>  <!--social icon div end -->
           </div>
+          <!-- hero image main -->
           <div class="profileImg">
-            <img src="./Images/mainImage.webp" alt="">
+           <img src="./Images/mainImage.webp" alt="profile-img">
          </div>
     </main>
     </div>
@@ -99,7 +110,7 @@
                 <i class="ri-html5-fill"></i>
             </div>
             <div class="bar html">
-
+               
             </div>
         </div>
         <div class="longCard">
@@ -107,7 +118,7 @@
                 <i class="ri-css3-fill"></i>
             </div>
             <div class="bar css">
-
+               
             </div>
         </div>
         <div class="longCard">
@@ -115,7 +126,7 @@
              <i class="ri-javascript-line"></i>
             </div>
             <div class="bar js">
-
+               
             </div>
         </div>
         <div class="longCard">
@@ -123,11 +134,12 @@
                 <i class="ri-tailwind-css-fill"></i>
             </div>
             <div class="bar tailwind">
-                
+               
             </div>
         </div>
        </section>
     </div>
+
 <!-- Page03 Services & Cerification -->  
  <div class="page" id="p-3">
  <section id="services">
@@ -156,45 +168,147 @@
        <button class="readmore">Read more</button>
      </div>
    </section>
-<section id="cerification">
-    <h2 class="p-3-heading">
-        My Certifications
-       </h2>
-        <div class="card">
-            <h3>Full Stack: Let's Begin Course 01</h3>
-            <img src="./Images/Full Stack Development_ Let's begin Training - Certificate of Completion_page-0001.jpg" alt="Certificate">
-            <button class="readmore"><a href="/Docs/Full%20Stack%20Development_%20Let's%20begin%20Training%20-%20Certificate%20of%20Completion.pdf">Download</a></button>
-         </div>
+   <!-- certification  section  -->
+<section id="certification">
+   <h3>certification</h3>
+   <div class="card-certificate">
+   <div class="certificates">
+    <img src="./Docs/Full Stack Development_ Let's begin Training - Certificate of Completion.jpg" alt="">
+   </div>
+    <button class="btn-view">
+        <a href="./Docs/Full Stack Development_ Let's begin Training - Certificate of Completion.pdf" style="text-decoration: none;color: white;">
+            View Certificate
+        </a>
+    </button>
+    <div class="content">
+         <h3>Full Stack Development Course 01  Certificate</h3>
+         <p>"Proudly holding my Internshala Training certificate, ready to put my new skills into action!"</p>
+         <p>This is My first Internshala Certificate I got for Completion of Visual Studio Code Course </p>
+    </div>
+  </div>
+   <div class="card-certificate">
+   <div class="certificates">
+    <img src="./Docs/Full Stack Development_ Let's begin Training - Certificate of Completion.jpg" alt="">
+   </div>
+    <button class="btn-view">
+        <a href="./Docs/Full Stack Development_ Let's begin Training - Certificate of Completion.pdf" style="text-decoration: none;color: white;">
+            View Certificate
+        </a>
+    </button>
+    <div class="content">
+         <h3>Full Stack Development Course 01  Certificate</h3>
+         <p>"Proudly holding my Internshala Training certificate, ready to put my new skills into action!"</p>
+         <p>This is My first Internshala Certificate I got for Completion of Visual Studio Code Course </p>
+    </div>
+  </div>
+   <div class="card-certificate">
+   <div class="certificates">
+    <img src="./Docs/Full Stack Development_ Let's begin Training - Certificate of Completion.jpg" alt="">
+   </div>
+    <button class="btn-view">
+        <a href="./Docs/Full Stack Development_ Let's begin Training - Certificate of Completion.pdf" style="text-decoration: none;color: white;">
+            View Certificate
+        </a>
+    </button>
+    <div class="content">
+         <h3>Full Stack Development Course 01  Certificate</h3>
+         <p>"Proudly holding my Internshala Training certificate, ready to put my new skills into action!"</p>
+         <p>This is My first Internshala Certificate I got for Completion of Visual Studio Code Course </p>
+    </div>
+  </div>
 </section>
- 
+
+<!-- Page03 Project,Contact,Footer -->  
 <div class="page" id="p-4">
     <section id="projects">
-       <div class="project-heading">My Projects</div>
-       <div class="project-container">
-         <div class="projectCard p-1">
-            <img src="./Images/project01.png" alt="" width="100%" height="100%" style="border-radius: 10px;">
-         </div>
-         <div class="projectCard p-2">
-            <img src="./Images/project01.png" alt="" width="100%" height="100%" style="border-radius: 10px;">
-         </div>
-         <div class="projectCard p-3">
-            <img src="./Images/project01.png" alt="" width="100%" height="100%" style="border-radius: 10px;">
-         </div>
-         <div class="projectCard p-4">
-            <img src="./Images/project01.png" alt="" width="100%" height="100%" style="border-radius: 10px;">
-         </div>
-         <div class="projectCard p-5">
-            <img src="./Images/project01.png" alt="" width="100%" height="100%" style="border-radius: 10px;">
-         </div>
-         <div class="projectCard p-6">
-            <img src="./Images/project01.png" alt="" width="100%" height="100%" style="border-radius: 10px;">
+         <h3>My Projects</h3>
+         <div class="box">
+             <div class="card c1">
+                <div class="img">
+                    <img src="./Images/project04.png" alt="">
+                </div>
+                <div class="cardtext"></div>
+             </div>
+             <div class="card c2">
+                <div class="img">
+                    <img src="./Images/project02.png" alt="">
+                </div>
+             </div>
+             <div class="card c3">
+                <div class="img">
+                    <img src="./Images/project03.png" alt="">
+                </div>
+             </div>
+             <div class="card c4">
+                <div class="img">
+                    <img src="./Images/project01.png" alt="">
+                </div>
+             </div>
+             <div class="card c5">
+                <div class="img">
+                    <img src="./Images/project05.png" alt="">
+                </div>
+             </div>
+             <div class="card c6">
+                <div class="img">
+                    <img src="./Images/project07.png" alt="">
+                </div>
+             </div>
+            
          </div>
     </section>
     <section id="contact">
-
-    </section>
+            <div class="container">
+            <h2>Let's <span class="text-wt">Talk</span></h2>
+            <!-- form container -->
+           <div class="apply-box" id="lettalk">
+             <form action="">
+                <div class="form-container">
+                <div class="form-inputs">
+                    <!-- form inputs -->
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" placeholder="First name">
+                </div>
+                <div class="form-inputs">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" placeholder="Last name">
+                </div>
+                <div class="form-inputs-lg">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" placeholder="for ex XYZ.pvt.ltd">
+                </div>
+                <div class="form-inputs-lg">
+                    <label for="emailaddress">Email</label>
+                    <input type="email" id="emailaddress" placeholder="someone@example.com">
+                </div>
+                <div class="form-inputs-lg">
+                    <label for="phoneNum">Phone number</label>
+                    <input type="text" id="phoneNum" placeholder="00000-00000">
+                </div>
+               <!-- message -->
+                <div class="textarea-input">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="message.."></textarea>
+                </div>
+                </div>
+                <!-- Submit btn -->
+                <div class="btn-dn">
+                <button type="submit">Let's Talk</button>
+                </div>
+           </form>
+         </div>
+        </div>
+      </section>
     <footer>
-
+        <!-- Footer Social Icons -->
+        <div class="socialIcons footer-icons">
+            <a href="https://github.com/prashantsingh019"><i class="ri-github-fill"></i></a>
+            <a href="https://www.instagram.com/am_prashantkushwah/"><i class="ri-instagram-line"></i></a>
+            <a href="https://www.linkedin.com/in/prashant-singh-b843b9210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="ri-linkedin-fill"></i></a>
+             <a href="http://Discordapp.com/users/1030679419628568576"><i class="ri-discord-fill"></i></a>
+             <a href="8586081235"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+             <a href="ps731278@gmail.com"><i class="ri-code-s-slash-line"></i></a>
+          </div>  <!--social icon div end -->
     </footer>
     </div>
 </body>
